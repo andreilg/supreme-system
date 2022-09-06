@@ -3,19 +3,18 @@ const config = require('conventional-changelog-conventionalcommits');
 
 module.exports = config({
     "types": [
-        { type: 'feat', section: 'Features2' },
-        { type: 'fix', section: 'Bug Fixes2' },
-        { type: 'perf', section: 'Performance' },
-        { type: 'revert', section: 'Reverts' },
-        { type: 'build', section: 'Build System' },
-        { type: 'test', section: 'Continuous Test' },
-        { type: 'refactor', section: 'Code Refactoring' },
-        { type: 'chore', section: 'Chores' },
-        { type: 'docs', section: 'Documentation' },
-        { type: 'style', section: 'Styles' },
-        { type: 'test', section: 'Tests' },
-        { type: 'wip', section: 'WIP', hidden: true },
-        { type: 'hide', section: 'Hidden', hidden: true },
-        { type: 'release', section: 'Releases', hidden: true },
+        { type: 'build', hidden: true },
+        { type: 'release', hidden: true },
+        { type: 'deprecate', section: 'Deprecated' }, // minor
+        { type: 'devops', hidden: true },
+        { type: 'docs', hidden: true },
+        { type: 'feat', section: 'Added' }, // minor
+        { type: 'fix', section: 'Fixed' }, // patch
+        { type: 'perf', section: 'Performance' }, // patch
+        { type: 'refactor', hidden: true },
+        { type: 'remove', section: 'Removed' }, // major
+        { type: 'security', section: 'Security' }, // patch
+        { type: 'style', hidden: true},
+        { type: 'test', hidden: true},
     ]
 })
