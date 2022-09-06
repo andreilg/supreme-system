@@ -8,7 +8,7 @@ module.exports = config({
         { type: 'perf', section: 'Performance' },
         { type: 'revert', section: 'Reverts' },
         { type: 'build', section: 'Build System' },
-        { type: 'ci', section: 'Continuous Integration' },
+        { type: 'test', section: 'Continuous Test' },
         { type: 'refactor', section: 'Code Refactoring' },
         { type: 'chore', section: 'Chores' },
         { type: 'docs', section: 'Documentation' },
