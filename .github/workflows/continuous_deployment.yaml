@@ -30,3 +30,4 @@ jobs:
           skip-git-pull: true
           fallback-version: 0.0.1
           config-file-path: '.github/config/config.js'
+          skip-on-empty: false
