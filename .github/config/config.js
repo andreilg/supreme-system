@@ -20,6 +20,10 @@ const conventionalCommitsConfig = config({
   ]
 })
 
+console.log('conventionalCommitsConfig', conventionalCommitsConfig)
+
+console.log('conventionalCommitsConfig JSON', JSON.stringify(conventionalCommitsConfig, null, 2))
+
 module.exports = Object.assign(conventionalCommitsConfig, {
   recommendedBumpOpts: Object.assign(conventionalCommitsConfig.recommendedBumpOpts, {
     whatBump: (commits) => {
