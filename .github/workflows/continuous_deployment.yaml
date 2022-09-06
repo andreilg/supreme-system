@@ -1,0 +1,26 @@
+name: Continuous Deployment
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  first:
+    name: Continuous Deployment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3.0.2
+        with:
+          token: ${{ secrets.ACTION_TOKEN }}
+          fetch-depth: 0
+          
+      - name: Bump version, tag commit, and create changelog
+        id: changelog
+        uses: TriPSs/conventional-changelog-action@v3.14.1
+        with:
+          github-token: ${{ secrets.ACTION_TOKEN }}
+          git-message: 'release: {version}'
+          version-file: pubspec.yaml
+          skip-git-pull: true
+          fallback-version: 0.0.1
