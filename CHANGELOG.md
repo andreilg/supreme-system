@@ -1,3 +1,10 @@
+## [0.1.1](https://github.com/andreilg/supreme-system/compare/v0.1.0...v0.1.1) (2022-09-06)
+
+
+### Continuous Test
+
+* asg ([4bb2f48](https://github.com/andreilg/supreme-system/commit/4bb2f48163c061c2ac425ba820c74d696ed7c5df))
+
 ## [0.1.0](https://github.com/andreilg/supreme-system/compare/v0.0.2...v0.1.0) (2022-09-06)
 
 
