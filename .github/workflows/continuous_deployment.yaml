@@ -15,6 +15,11 @@ jobs:
           token: ${{ secrets.ACTION_TOKEN }}
           fetch-depth: 0
           
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm install conventional-changelog-conventionalcommits
+          
       - name: Bump version, tag commit, and create changelog
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3.14.1
@@ -24,3 +29,4 @@ jobs:
           version-file: pubspec.yaml
           skip-git-pull: true
           fallback-version: 0.0.1
+          config-file-path: '.github/config/config.js'
